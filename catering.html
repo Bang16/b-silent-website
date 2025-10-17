@@ -1,0 +1,260 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catering | B'Silent – Platters, Buffets, 3-Course Meals</title>
+    <meta name="description" content="Catering services: platters, buffet service, 3-course meals, BBQ, spit braai. Inclusions, add-ons, process, and quotes." />
+    <link rel="canonical" href="https://yourdomain.com/static-site/catering.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation with Cart Icon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'SILENT Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="flowers.html">Flowers</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html" class="active">Catering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Floral Selections</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="catering-hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Culinary Experiences</h1>
+                    <p class="lead">From casual platters to elegant dining—crafted menus to elevate your occasion</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catering Services -->
+        <section class="section-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Catering Services</h2>
+                    <p>Tailored culinary solutions for every type of gathering</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Platters</h3>
+                        <p>Artfully arranged bite-sized selections perfect for cocktail hours and casual gatherings</p>
+                        <ul class="service-features">
+                            <li>Canapés & finger foods</li>
+                            <li>Cheese & charcuterie</li>
+                            <li>Seasonal fruit displays</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bread-slice"></i></div>
+                        <h3>Buffet Service</h3>
+                        <p>Abundant variety with self-service convenience for larger groups</p>
+                        <ul class="service-features">
+                            <li>3-5 main dish options</li>
+                            <li>Accompaniments & sides</li>
+                            <li>Dessert station</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-wine-glass-alt"></i></div>
+                        <h3>3-Course Meals</h3>
+                        <p>Elegant plated service for formal occasions and intimate dinners</p>
+                        <ul class="service-features">
+                            <li>Seasonal starter</li>
+                            <li>Choice of main course</li>
+                            <li>Decadent dessert</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-fire"></i></div>
+                        <h3>BBQ</h3>
+                        <p>Grilled favorites prepared fresh on-site for outdoor events</p>
+                        <ul class="service-features">
+                            <li>Premium meat selection</li>
+                            <li>Vegetarian options</li>
+                            <li>Traditional sides</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>Spit Braai</h3>
+                        <p>Slow-roasted meats for hearty celebrations and traditional gatherings</p>
+                        <ul class="service-features">
+                            <li>Whole lamb/pork options</li>
+                            <li>Marinated to perfection</li>
+                            <li>6-8 hour roasting</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>Custom Menus</h3>
+                        <p>Tailored options for dietary needs and special themes</p>
+                        <ul class="service-features">
+                            <li>Vegan/vegetarian</li>
+                            <li>Gluten-free</li>
+                            <li>Cultural specialties</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inclusions & Add-ons -->
+        <section class="section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Service Details</h2>
+                    <p>What's included and available enhancements</p>
+                </div>
+                <div class="addon-card">
+                    <h3><i class="fas fa-plus-circle"></i> Standard Inclusions</h3>
+                    <ul>
+                        <li>Transportation & logistics coordination</li>
+                        <li>Professional wait staff (R150/hr per server)</li>
+                        <li>Chef-attended stations</li>
+                        <li>Premium bar service and beverage packages</li>
+                        <li>Specialty tableware rentals</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section-light">
+            <div class="container">
+                <div class="text-center" style="margin-top:3rem;">
+                    <a href="./contact.html" class="btn btn-primary">Begin Your Catering Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Catering Reviews</h2>
+                    <p>What our clients say about our culinary services</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The 3-course wedding menu was exceptional. Guests are still complimenting the beef Wellington months later!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Mpho M.</p>
+                            <p class="testimonial-role">Wedding Client</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Our corporate BBQ for 80 was flawless. The team handled everything from setup to cleanup professionally."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Mark T.</p>
+                            <p class="testimonial-role">Corporate Client</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The vegetarian options were creative and delicious—even our meat-loving guests were impressed."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Precious K.</p>
+                            <p class="testimonial-role">Private Party</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div>
+                        <p class="brand-name">B'Silent</p>
+                        <p class="brand-tagline">"Curated Calm"</p>
+                    </div>
+                </div>
+
+                <div class="footer-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/share/16ph5jVDbW/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 B'Silent. All rights reserved. | Elegant Flowers & Catering for Every Occasion.</p>
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

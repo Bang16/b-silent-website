@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Flowers - PS B'Silent Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Admin Specific Styles */
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+            background: var(--brand-light, #f8f9fa);
+        }
+
+        /* Sidebar */
+        .admin-sidebar {
+            width: 250px;
+            background: var(--brand-dark, #22223b);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .admin-brand {
+            text-align: center;
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 2rem;
+        }
+
+            .admin-brand img {
+                height: 40px;
+                margin-bottom: 0.5rem;
+            }
+
+        .admin-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+            .admin-nav li {
+                margin-bottom: 0.5rem;
+            }
+
+            .admin-nav a {
+                color: white;
+                text-decoration: none;
+                padding: 0.75rem 1.5rem;
+                display: block;
+                border-radius: 6px;
+                transition: background 0.3s ease;
+            }
+
+                .admin-nav a:hover,
+                .admin-nav a.active {
+                    background: rgba(255,255,255,0.1);
+                }
+
+            .admin-nav i {
+                width: 20px;
+                margin-right: 0.75rem;
+            }
+
+        /* Main Content */
+        .admin-main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+            .admin-header h1 {
+                font-size: 2rem;
+                color: var(--brand-dark, #22223b);
+                margin: 0;
+            }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            background: #d291bc;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .btn-primary {
+            background: #e75480;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #e75480;
+            color: #e75480;
+        }
+
+            .btn:hover, .btn-outline:hover {
+                background: #22223b;
+                color: #fff;
+            }
+
+        .crud-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .input {
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+            .input:focus {
+                border-color: #d291bc;
+            }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+            .product-card h3 {
+                margin: 0 0 0.5rem 0;
+                color: #e75480;
+                font-size: 1.2rem;
+            }
+
+        .muted {
+            color: #6c757d;
+            font-size: 0.98rem;
+        }
+
+        .product-card strong {
+            color: #22223b;
+        }
+
+        .product-card .btn-outline {
+            margin-right: 0.5rem;
+        }
+
+            .product-card .btn-outline:last-child {
+                margin-right: 0;
+                border-color: #dc3545;
+                color: #dc3545;
+            }
+
+                .product-card .btn-outline:last-child:hover {
+                    background: #dc3545;
+                    color: #fff;
+                }
+
+        /* Responsive styles */
+        @media (max-width: 1023px) {
+            .admin-main {
+                padding: 1rem;
+                padding-top: 4rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-sidebar {
+                width: 100%;
+                position: fixed;
+                left: -100%;
+                z-index: 1000;
+                height: 100vh;
+                transition: left 0.3s ease;
+                overflow-y: auto;
+            }
+
+                .admin-sidebar.active {
+                    left: 0;
+                }
+        }
+
+        .mobile-menu-toggle {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: #22223b;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            z-index: 1001;
+            display: block;
+        }
+
+        @media (min-width: 1024px) {
+            .admin-container {
+                flex-direction: row;
+            }
+
+            .admin-sidebar {
+                width: 250px;
+                position: relative;
+                left: 0;
+                height: auto;
+                padding: 2rem 0;
+            }
+
+            .admin-main {
+                flex: 1;
+                margin-top: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Overlay for mobile menu */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+            .sidebar-overlay.active {
+                display: block;
+            }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="PS B'Silent">
+                <h3>Admin Panel</h3>
+            </div>
+            <nav>
+                <ul class="admin-nav">
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="manage-flowers.html" class="active"><i class="fas fa-rose"></i> Flower Arrangements</a></li>
+                    <li><a href="manage-events.html"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="manage-catering.html"><i class="fas fa-utensils"></i> Catering</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="login.html" style="color: #d291bc;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1>Manage Flower Arrangements</h1>
+                <button class="btn btn-primary" onclick="showAddForm()">
+                    <i class="fas fa-plus"></i> Add New Arrangement
+                </button>
+            </div>
+            <div class="crud-actions">
+                <input type="text" placeholder="Search arrangements..." class="input" style="flex: 1;">
+                <select class="input">
+                    <option>All Categories</option>
+                    <option>Bouquets</option>
+                    <option>Centerpieces</option>
+                    <option>Wedding Arrangements</option>
+                </select>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>Rose Elegance Bouquet</h3>
+                    <p class="muted">12 Red Roses with Baby's Breath</p>
+                    <p><strong>Price:</strong> R350</p>
+                    <p><strong>Category:</strong> Bouquets</p>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <button class="btn btn-outline">Edit</button>
+                        <button class="btn btn-outline" style="color: #dc3545; border-color: #dc3545;">Delete</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <h3>Spring Centerpiece</h3>
+                    <p class="muted">Mixed seasonal flowers</p>
+                    <p><strong>Price:</strong> R450</p>
+                    <p><strong>Category:</strong> Centerpieces</p>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <button class="btn btn-outline">Edit</button>
+                        <button class="btn btn-outline" style="color: #dc3545; border-color: #dc3545;">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <button class="mobile-menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <script>
+        // Authentication check
+        if (!localStorage.getItem('adminLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.admin-sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        menuToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        overlay.addEventListener('click', function () {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        document.querySelectorAll('.admin-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+        function showAddForm() {
+            alert('Add new flower form would appear here!');
+        }
+        // Responsive sidebar reset
+        function checkScreenSize() {
+            if (window.innerWidth >= 1024) {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+        window.addEventListener('resize', checkScreenSize);
+    </script>
+</body>
+</html>

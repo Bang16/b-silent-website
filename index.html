@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B'Silent - Curated Calm</title>
+    <meta name="description" content="Elegant flower arrangements and catering services">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'Silent Logo" class="logo">
+
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="flowers.html">Flowers</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>Your Floral Selections</h3>
+        <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Cart items will be added here dynamically -->
+        <p class="empty-cart-message">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">R0.00</span>
+        </div>
+        <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>B'Silent</h1>
+                    <p>Elegant flower arrangements and exceptional catering services for life's most precious moments</p>
+                    <div class="hero-buttons">
+                        <a href="flowers.html" class="btn btn-primary">Shop Flowers</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="images/logo.png" alt="B'Silent">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>From intimate gatherings to grand celebrations, we bring elegance to every occasion</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Fresh Flowers</h3>
+                    <p>Roses, Peonies, Sunflowers, Lilies, Tulips & Baby's Breath</p>
+                </div>
+                <div class="service-card">
+                    <h3>Event Services</h3>
+                    <p>Weddings, Corporate Events, Funerals, Birthdays & More</p>
+                </div>
+                <div class="service-card">
+                    <h3>Catering Services</h3>
+                    <p>Platters, Buffets, 3-Course Meals, BBQ & Spit Braai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Info -->
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to create something beautiful together?</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Operating Hours</h3>
+                    <p>Monday - Friday: 8am - 5pm<br>Saturday: 8am - 2pm<br>Sunday Delivery: After 12pm</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Floral Delivery Areas</h3>
+                    <p>Johannesburg<br>Pretoria<br>North West</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Same Day Delivery</h3>
+                    <p>Orders placed before 12pm<br>qualify for same-day delivery<br>in selected areas</p>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <a href="https://wa.me/27696661407" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact Us via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-text">
+                        <p class="brand-name">B'Silent</p>
+                        <p class="brand-tagline">"Curated Calm"</p>
+                    </div>
+                </div>
+                <div class="footer-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/share/16ph5jVDbW/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 B'Silent. All rights reserved. | Elegant Flowers & Catering for Every Occasion.</p>
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

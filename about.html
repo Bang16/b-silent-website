@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | B'SILENT – Curated Floral & Catering</title>
+    <meta name="description" content="Discover B'SILENT's journey: Where quiet luxury meets floral artistry and culinary excellence in Gauteng">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'SILENT Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="flowers.html">Flowers</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Floral Selections</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Whispering Luxury Since 2023</h1>
+                <p class="subtitle">
+                    We create elegant floral arrangements and thoughtful catering experiences that bring calm, beauty, and celebration to life's most meaningful moments.
+                </p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Values</h2>
+                <p>Beauty speaks loudest when it whispers</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We source the freshest blooms and Premium ingredients to ensure memorable experinces.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Care</h3>
+                    <p>Every arrangement and menu is designed with attention to detail and your story in mind.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Reliability</h3>
+                    <p>We deliver on time and on brief, with calm professionalism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Offerings</h2>
+                <p>Comprehensive elegance for life's moments</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-details">
+                        <h3>Floral Artistry</h3>
+                        <ul>
+                            <li>Signature bouquets & boxed arrangements</li>
+                            <li>Wedding & event florals</li>
+                            <li>Corporate installations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-details">
+                        <h3>Event Design</h3>
+                        <ul>
+                            <li>Full-service wedding styling</li>
+                            <li>Corporate event decor</li>
+                            <li>Memorial tributes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-details">
+                        <h3>Culinary Experiences</h3>
+                        <ul>
+                            <li>Platters & buffets</li>
+                            <li>3-course meals</li>
+                            <li>BBQ & spit braai</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-truck"></i> Delivery Areas</h3>
+                    <p>
+                        Johannesburg: R250<br>
+                        Pretoria: R280<br>
+                        North West: R300
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Operating Hours</h3>
+                    <p>
+                        Mon-Fri: 8am-5pm<br>
+                        Sat: 8am-2pm<br>
+                        Sun: Delivery after 12pm
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-calendar-check"></i> Booking</h3>
+                    <p>
+                        48-hour notice for floral orders<br>
+                        6-weeks notice for events<br>
+                        WhatsApp inquiries preferred
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <!-- CTA Section -->
+            <section class="footer-cta">
+                <h2>Ready to Create Something Beautiful?</h2>
+                <a href="contact.html" class="btn btn-primary">Begin Your Journey</a>
+            </section>
+            <div class="footer-connect">
+                <h3>Connect With Us</h3>
+                <div class="footer-social">
+                    <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/share/16ph5jVDbW/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+            <br />
+
+            <div class="copyright">
+                © 2023 B'SILENT. All rights reserved. | Elegant Flowers & Catering for Every Occasion.
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

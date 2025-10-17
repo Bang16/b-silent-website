@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled - PS B'Silent</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cancel-hero {
+            background: linear-gradient(135deg, #a94442 0%, #e27d60 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cancel-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="checkout-header">
+        <div class="container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="PS B'Silent" style="height: 50px;">
+            </a>
+        </div>
+    </header>
+
+    <section class="cancel-hero">
+        <div class="container">
+            <h1>Payment Cancelled ❌</h1>
+            <p>Your payment was not completed.</p>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="cancel-card">
+            <h2>Want to Try Again?</h2>
+            <p>You can retry checkout or return to shopping.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="checkout.html" class="btn btn-primary">Retry Payment</a>
+                <a href="index.html" class="btn btn-outline">Return Home</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

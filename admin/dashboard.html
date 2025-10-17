@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PS B'Silent Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Admin Specific Styles */
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+            background: var(--brand-light);
+        }
+
+        /* Sidebar */
+        .admin-sidebar {
+            width: 250px;
+            background: var(--brand-dark);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .admin-brand {
+            text-align: center;
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 2rem;
+        }
+
+            .admin-brand img {
+                height: 40px;
+                margin-bottom: 0.5rem;
+            }
+
+        .admin-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+            .admin-nav li {
+                margin-bottom: 0.5rem;
+            }
+
+            .admin-nav a {
+                color: white;
+                text-decoration: none;
+                padding: 0.75rem 1.5rem;
+                display: block;
+                transition: background 0.3s ease;
+            }
+
+                .admin-nav a:hover,
+                .admin-nav a.active {
+                    background: rgba(255,255,255,0.1);
+                }
+
+            .admin-nav i {
+                width: 20px;
+                margin-right: 0.75rem;
+            }
+
+        /* Main Content */
+        .admin-main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--brand-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--muted-foreground);
+        }
+
+
+        /* Admin Specific Styles */
+        .admin-container {
+            display: flex;
+            flex-direction: column; /* Stack on mobile */
+            min-height: 100vh;
+            background: var(--brand-light);
+        }
+
+        /* Sidebar - Hidden on mobile, show as toggle */
+        .admin-sidebar {
+            width: 100%; /* Full width on mobile */
+            background: var(--brand-dark);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: -100%; /* Hidden by default */
+            height: 100vh;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+
+            .admin-sidebar.active {
+                left: 0; /* Show when active */
+            }
+
+        /* Mobile menu toggle button */
+        .mobile-menu-toggle {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: var(--brand-dark);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            z-index: 1001;
+            display: block; /* Show on mobile */
+        }
+
+        /* Main Content */
+        .admin-main {
+            padding: 2rem;
+            margin-top: 0; /* Remove margin for mobile */
+        }
+
+        /* Show sidebar on desktop */
+        @media (min-width: 1024px) {
+            .admin-container {
+                flex-direction: row; /* Side by side on desktop */
+            }
+
+            .admin-sidebar {
+                width: 250px;
+                position: relative;
+                left: 0;
+                height: auto;
+            }
+
+            .admin-main {
+                flex: 1;
+                margin-top: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: none; /* Hide on desktop */
+            }
+
+            .admin-sidebar {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Tablet styles */
+        @media (max-width: 1023px) {
+            .admin-main {
+                padding: 1rem;
+                padding-top: 4rem; /* Space for mobile menu button */
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr; /* Stack stats on mobile */
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .admin-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .admin-brand {
+                padding: 1rem;
+            }
+
+                .admin-brand img {
+                    height: 35px;
+                }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+                table th,
+                table td {
+                    padding: 0.5rem;
+                }
+        }
+
+        /* Overlay for mobile menu */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+            .sidebar-overlay.active {
+                display: block;
+            }
+
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .stat-card {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="PS B'Silent">
+                <h3>Admin Panel</h3>
+            </div>
+
+            <nav>
+                <ul class="admin-nav">
+                    <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="manage-flowers.html"><i class="fas fa-rose"></i> Flower Arrangements</a></li>
+                    <li><a href="manage-events.html"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="manage-catering.html"><i class="fas fa-utensils"></i> Catering</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="login.html" style="color: var(--dusty-rose);"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1>Dashboard Overview</h1>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">New Orders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">R12,458</div>
+                    <div class="stat-label">Revenue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Pending Events</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">56</div>
+                    <div class="stat-label">Total Customers</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card">
+                <div class="card-body">
+                    <h2>Recent Orders</h2>
+                    <table style="width: 100%; margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#00125</td>
+                                <td>Sarah Johnson</td>
+                                <td>R1,250</td>
+                                <td><span style="color: green;">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>#00124</td>
+                                <td>Mike Thompson</td>
+                                <td>R2,800</td>
+                                <td><span style="color: orange;">Processing</span></td>
+                            </tr>
+                            <tr>
+                                <td>#00123</td>
+                                <td>Emily Davis</td>
+                                <td>R850</td>
+                                <td><span style="color: blue;">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Overlay for mobile menu -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <script>
+        // Simple authentication check
+        if (!localStorage.getItem('adminLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+
+        // Logout functionality
+        document.querySelector('a[href="login.html"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            localStorage.removeItem('adminLoggedIn');
+            window.location.href = 'login.html';
+        });
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.admin-sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        menuToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', function () {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Close menu when clicking links on mobile
+        document.querySelectorAll('.admin-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+
+        // Check screen size and adjust accordingly
+        function checkScreenSize() {
+            if (window.innerWidth >= 1024) {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        window.addEventListener('resize', checkScreenSize);
+    </script>
+</body>
+</html>

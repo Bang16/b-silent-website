@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Collections | B'SILENT</title>
+    <meta name="description" content="Premium floral arrangements in Johannesburg - Roses, Peonies, Sunflowers & more">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation with Cart Icon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'SILENT Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="flowers.html" class="active">Flowers</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Floral Selections</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Flower Hero -->
+    <section class="flower-hero">
+        <div class="container">
+            <h1>Curated Floral Collections</h1>
+            <p class="subtitle">Premium arrangements for every occasion (Floral Arrangements will be quoted separately).</p>
+        </div>
+    </section>
+    <br/>
+
+    <!-- Flower Collections -->
+    <section class="flower-collections">
+        <div class="container">
+            <!-- Boxed Arrangements -->
+            <div class="collection-section">
+                <h2>Boxed Arrangements</h2>
+                <div class="product-grid">
+                    <!-- Square Box -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/squareBox.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Square Box Arrangement</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R850</span>
+                                    <button class="add-to-cart" data-name="Square Box (Small)" data-price="850">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R950</span>
+                                    <button class="add-to-cart" data-name="Square Box (Medium)" data-price="950">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R1150</span>
+                                    <button class="add-to-cart" data-name="Square Box (Large)" data-price="1150">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heart Box -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/heartShaped.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Heart-Shaped Box</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R900</span>
+                                    <button class="add-to-cart" data-name="Heart Box (Small)" data-price="900">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R1000</span>
+                                    <button class="add-to-cart" data-name="Heart Box (Medium)" data-price="1000">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R1250</span>
+                                    <button class="add-to-cart" data-name="Heart Box (Large)" data-price="1250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Round Box -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/cylinder.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Cylinder/Round Box</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R800</span>
+                                    <button class="add-to-cart" data-name="Round Box (Small)" data-price="800">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R900</span>
+                                    <button class="add-to-cart" data-name="Round Box (Medium)" data-price="900">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R1050</span>
+                                    <button class="add-to-cart" data-name="Round Box (Large)" data-price="1050">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!-- Loose Flowers -->
+            <div class="collection-section">
+                <h2>Loose Flowers</h2>
+                <div class="product-grid">
+                    <!-- Sunflowers -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/sunflower.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Sunflowers</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R850</span>
+                                    <button class="add-to-cart" data-name="Sunflowers (Small)" data-price="850">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R950</span>
+                                    <button class="add-to-cart" data-name="Sunflowers (Medium)" data-price="950">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R1050</span>
+                                    <button class="add-to-cart" data-name="Sunflowers (Large)" data-price="1050">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lily -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/lily.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Lily</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R750</span>
+                                    <button class="add-to-cart" data-name="Lily (Small)" data-price="750">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R850</span>
+                                    <button class="add-to-cart" data-name="Lily (Medium)" data-price="850">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R950</span>
+                                    <button class="add-to-cart" data-name="Lily (Large)" data-price="950">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Peonies -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/peony.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Peonies</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R650</span>
+                                    <button class="add-to-cart" data-name="Peonies (Small)" data-price="650">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R750</span>
+                                    <button class="add-to-cart" data-name="Peonies (Medium)" data-price="750">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R850</span>
+                                    <button class="add-to-cart" data-name="Peonies (Large)" data-price="850">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tulip -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/tulip.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Tulip</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Small</span>
+                                    <span>R850</span>
+                                    <button class="add-to-cart" data-name="Tulip (Small)" data-price="850">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Medium</span>
+                                    <span>R950</span>
+                                    <button class="add-to-cart" data-name="Tulip (Medium)" data-price="950">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Large</span>
+                                    <span>R1050</span>
+                                    <button class="add-to-cart" data-name="Tulip (Large)" data-price="1050">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!-- Roses -->
+            <div class="collection-section">
+                <h2>Roses</h2>
+                <div class="product-grid">
+                    <!-- Red Roses -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/redRose.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Red Roses</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>20 Stems</span>
+                                    <span>R650</span>
+                                    <button class="add-to-cart" data-name="Red Roses (20 Stems)" data-price="650">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>25 Stems</span>
+                                    <span>R850</span>
+                                    <button class="add-to-cart" data-name="Red Roses (25 Stems)" data-price="850">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>60 Stems</span>
+                                    <span>R1500</span>
+                                    <button class="add-to-cart" data-name="Red Roses (60 Stems)" data-price="1500">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>100 Stems</span>
+                                    <span>R2400</span>
+                                    <button class="add-to-cart" data-name="Red Roses (100 Stems)" data-price="2400">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>200 Stems</span>
+                                    <span>R3100</span>
+                                    <button class="add-to-cart" data-name="Red Roses (200 Stems)" data-price="3100">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>300 Stems</span>
+                                    <span>R3950</span>
+                                    <button class="add-to-cart" data-name="Red Roses (300 Stems)" data-price="3950">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                    
+
+                    <!-- White Roses -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/whiteRose.jpg');"></div>
+                        <div class="product-details">
+                            <h3>White Roses</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>20 Stems</span>
+                                    <span>R550</span>
+                                    <button class="add-to-cart" data-name="White Roses (20 Stems)" data-price="550">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>25 Stems</span>
+                                    <span>R750</span>
+                                    <button class="add-to-cart" data-name="White Roses (25 Stems)" data-price="750">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>50 Stems</span>
+                                    <span>R1400</span>
+                                    <button class="add-to-cart" data-name="White Roses (50 Stems)" data-price="1400">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>100 Stems</span>
+                                    <span>R2300</span>
+                                    <button class="add-to-cart" data-name="White Roses (100)" data-price="2300">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>200 Stems</span>
+                                    <span>R3000</span>
+                                    <button class="add-to-cart" data-name="White Roses (200)" data-price="3000">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>300 Stems</span>
+                                    <span>R3850</span>
+                                    <button class="add-to-cart" data-name="White Roses (300)" data-price="3850">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colour Roses -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/colourRose.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Colour Roses (Other Colour)</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>20 Stems</span>
+                                    <span>R500</span>
+                                    <button class="add-to-cart" data-name="Colour Roses (20 Stems)" data-price="500">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>25 Stems</span>
+                                    <span>R700</span>
+                                    <button class="add-to-cart" data-name="Colour Roses (25 Stems)" data-price="700">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>50 Stems</span>
+                                    <span>R1350</span>
+                                    <button class="add-to-cart" data-name="Colour Roses (50 Stems)" data-price="1350">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>100 Stems</span>
+                                    <span>R2200</span>
+                                    <button class="add-to-cart" data-name="Colour Roses (100)" data-price="2200">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>200 Stems</span>
+                                    <span>R2950</span>
+                                    <button class="add-to-cart" data-name="Colour Roses (200)" data-price="2950">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>300 Stems</span>
+                                    <span>R3750</span>
+                                    <button class="add-to-cart" data-name="Colour Roses (300)" data-price="3750">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+            <br/>
+
+            <!-- Add-ons -->
+            <div class="collection-section">
+                <h2>Add-ons</h2>
+                <div class="addons-grid">
+                    <div class="addon-card">
+                        <h3>Letter</h3>
+                        <span class="price">R100</span>
+                        <button class="add-to-cart" data-name="Letter Add-on" data-price="100">Add</button>
+                    </div>
+                    <div class="addon-card">
+                        <h3>Gypsophila</h3>
+                        <span class="price">R180</span>
+                        <button class="add-to-cart" data-name="Gypsophila Add-on" data-price="180">Add</button>
+                    </div>
+                    <div class="addon-card">
+                        <h3>Diamonds</h3>
+                        <span class="price">R10 each</span>
+                        <button class="add-to-cart" data-name="Diamonds Add-on" data-price="10">Add</button>
+                    </div>
+                    <div class="addon-card">
+                        <h3>Glitter</h3>
+                        <span class="price">R80</span>
+                        <button class="add-to-cart" data-name="Glitter Add-on" data-price="80">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Notice -->
+    <section class="delivery-notice">
+        <div class="container">
+            <p><i class="fas fa-truck"></i> Delivery available in JHB (R250), PTA (R280) & NW (R300) - Not included in listed prices</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-text">
+                        <p class="brand-name">B'SILENT</p>
+                        <p class="brand-tagline">"Curated Calm"</p>
+                    </div>
+                </div>
+                <div class="footer-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/share/16ph5jVDbW/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 B'SILENT. All rights reserved. | Elegant Flowers & Catering for Every Occasion.</p>
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

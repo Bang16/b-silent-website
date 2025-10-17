@@ -1,0 +1,286 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | B'Silent – Get In Touch</title>
+    <meta name="description" content="Contact B'Silent for flowers, events, and catering. Send a message or request an event/catering quote. We respond within 24 hours." />
+    <link rel="canonical" href="https://yourdomain.com/static-site/contact.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <!-- Navigation with Cart Icon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'SILENT Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="flowers.html">Flowers</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Floral Selections</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="section bg-gradient-subtle text-center">
+            <div class="container">
+                <h1>Contact B'Silent</h1>
+                <p class="lead">We'd love to hear from you! Reach out for floral orders, event enquiries, or catering quotes.</p>
+                <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center;">
+                    <a href="https://wa.me/27696661407" class="btn btn-primary">WhatsApp Us</a>
+                </div>
+            </div>
+        </section>
+        <br />
+
+        <!-- Contact Options -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@psbsilent.com">info@bsilentofficial.co.za</a></p>
+                        <p class="muted">Response within 24 hours</p>
+                    </div>
+
+
+                    <div class="contact-card">
+                        <div class="contact-icon">⏰</div>
+                        <h3>Delivery Hours</h3>
+                        <p>Same-day delivery for orders before 12pm</p>
+                        <p class="muted">Sunday delivery after 12pm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Contact Form -->
+        <section class="section bg-gradient-subtle">
+            <div class="container">
+                <div class="grid grid-2" style="align-items:start; gap:2rem;">
+                    <div>
+                        <h2 class="text-center">Send Us a Message</h2>
+                        <div class="card" style="margin-top:1.5rem;">
+                            <div class="card-body">
+                                <form action="send-email.php" method="post">
+                                    <div class="form-group">
+                                        <label class="label" for="name">Full Name*</label>
+                                        <input class="input" id="name" name="name" type="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="email">Email*</label>
+                                        <input class="input" id="email" name="email" type="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="phone">Phone</label>
+                                        <input class="input" id="phone" name="phone" type="tel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="subject">Subject*</label>
+                                        <select class="input" id="subject" name="subject" required>
+                                            <option value="">Select an option</option>
+                                            <option value="flowers">Flower Order</option>
+                                            <option value="events">Event Enquiry</option>
+                                            <option value="catering">Catering Quote</option>
+                                            <option value="general">General Question</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="message">Message*</label>
+                                        <textarea class="textarea" id="message" name="message" required></textarea>
+                                    </div>
+                                    <div style="margin-top:1.5rem; text-align:center;">
+                                        <button type="submit" class="btn btn-primary" onclick="this.innerHTML='Sending...'">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div>
+                        <h2 class="text-center">Event & Catering Quote</h2>
+                        <div class="card" style="margin-top:1.5rem;">
+                            <div class="card-body">
+                                <form action="send-event-quote.php" method="post">
+                                    <div class="form-group">
+                                        <label class="label" for="name">Full Name*</label>
+                                        <input class="input" id="name" name="name" type="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="email">Email*</label>
+                                        <input class="input" id="email" name="email" type="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="phone">Phone</label>
+                                        <input class="input" id="phone" name="phone" type="tel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="event-name">Event Name/Type*</label>
+                                        <input class="input" id="event-name" name="event_name" type="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="event-date">Event Date*</label>
+                                        <input class="input" id="event-date" name="event_date" type="date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="event-location">Event Location</label>
+                                        <input class="input" id="event-location" name="event_location" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="guest-count">Guest Count*</label>
+                                        <input class="input" id="guest-count" name="guest_count" type="number" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label">Services Needed*</label>
+                                        <div class="service-options">
+                                            <label class="service-option">
+                                                <input type="checkbox" name="services[]" value="florals"> Florals
+                                            </label>
+                                            <label class="service-option">
+                                                <input type="checkbox" name="services[]" value="decor"> Decor
+                                            </label>
+                                            <label class="service-option">
+                                                <input type="checkbox" name="services[]" value="catering"> Catering
+                                            </label>
+                                            <label class="service-option">
+                                                <input type="checkbox" name="services[]" value="full-service"> Full Service
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="event-details">Event Details*</label>
+                                        <textarea class="textarea" id="event-details" name="event_details" required></textarea>
+                                    </div>
+                                    <div style="margin-top:1.5rem; text-align:center;">
+                                        <button type="submit" class="btn btn-primary">Request Quote</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <p class="muted text-center" style="margin-top:1rem;">We recommend booking at least 6 weeks in advance for events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br />
+
+        <!-- Delivery Information -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Floral Delivery</h2>
+                <div class="grid grid-3" style="margin-top:1.5rem;">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3>Johannesburg</h3>
+                            <p class="muted">R250</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3>Pretoria</h3>
+                            <p class="muted">R280</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3>North West</h3>
+                            <p class="muted">R300</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <!-- CTA Section -->
+            <section class="footer-cta">
+                <h2>Ready to Create Something Beautiful?</h2>
+                <a href="contact.html" class="btn btn-primary">Begin Your Journey</a>
+            </section>
+            <div class="footer-connect">
+                <h3>Connect With Us</h3>
+                <div class="footer-social">
+                    <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/share/16ph5jVDbW/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+            <br />
+
+            <div class="copyright">
+                © 2023 B'SILENT. All rights reserved. | Elegant Flowers & Catering for Every Occasion.
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Check for success messages after form submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.get('status') === 'success') {
+                alert('✅ Thank you! Your message has been sent successfully.');
+                // Clear the URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+            else if (urlParams.get('status') === 'event_success') {
+                alert('✅ Thank you! Your event quote request has been received.');
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+    </script>
+</body>
+</html>

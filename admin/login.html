@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - B'Silent</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-login {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--brand-dark) 0%, var(--dusty-rose) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+            .login-logo img {
+                height: 60px;
+            }
+        
+        
+    </style>
+</head>
+<body>
+    <section class="admin-login">
+        <div class="login-card">
+            <div class="login-logo">
+                <img src="../images/logo.png" alt="PS B'Silent">
+            </div>
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Admin Login</h2>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="label" for="username">Username</label>
+                    <input class="input" type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="label" for="password">Password</label>
+                    <input class="input" type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                    Sign In
+                </button>
+            </form>
+
+            <p style="text-align: center; margin-top: 2rem; color: var(--muted-foreground); font-size: 0.9rem;">
+                Restricted access. Authorized personnel only.
+            </p>
+        </div>
+    </section>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Simple authentication (will be enhanced later)
+        if (username === 'admin' && password === 'password123') {
+            //Set login status
+            alert('Login successful! Redirecting to dashboard...');
+            localStorage.setItem('adminLoggedIn', 'true');
+            window.location.href = 'dashboard.html';
+        } else {
+            alert('Invalid credentials. Please try again.');
+        }
+    });
+    </script>
+</body>
+</html>

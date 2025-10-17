@@ -1,0 +1,298 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event Florals & Decor | PS B'Silent – Wedding & Corporate Florals</title>
+    <meta name="description" content="Breathtaking floral designs for weddings, corporate events, and special occasions. Full-service event decor with consultation, planning, and professional setup." />
+    <link rel="canonical" href="https://yourdomain.com/static-site/events.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation with Cart Icon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'SILENT Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="flowers.html">Flowers</a>
+                    <a href="events.html" class="active">Events</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Floral Selections</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="events-hero">
+        <div class="container events-hero-content">
+            <h1>Beyond Décor, Into Experience</h1>
+            <p class="lead">Immersive floral design and luxury styling that bring your vision to life.</p>
+            <div class="hero-buttons">
+                <a href="./contact.html" class="btn btn-primary">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Types -->
+    <section class="event-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>Events We Elevate</h2>
+                <p>Each event receives our full attention to detail and creative expertise</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="event-card">
+                    <div class="event-content">
+                        <h3>Weddings</h3>
+                        <p>From bouquets to breathtaking installations, we'll make your wedding florals unforgettable.</p>
+                        <ul class="event-services">
+                            <li>Bridal bouquets</li>
+                            <li>Ceremony arches</li>
+                            <li>Reception centerpieces</li>
+                            <li>Full venue styling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-content">
+                        <h3>Corporate Events</h3>
+                        <p>Professional floral designs that enhance your brand and impress your guests.</p>
+                        <ul class="event-services">
+                            <li>Conference decor</li>
+                            <li>Branded installations</li>
+                            <li>Office transformations</li>
+                            <li>Award ceremony florals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-content">
+                        <h3>Special Occasions</h3>
+                        <p>Beautiful florals for life's celebrations big and small.</p>
+                        <ul class="event-services">
+                            <li>Birthdays & anniversaries</li>
+                            <li>Baby showers</li>
+                            <li>Graduations</li>
+                            <li>Engagement parties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-content">
+                        <h3>Memorials</h3>
+                        <p>Thoughtful, meaningful arrangements to honor your loved ones.</p>
+                        <ul class="event-services">
+                            <li>Casket sprays</li>
+                            <li>Memorial wreaths</li>
+                            <li>Tribute arrangements</li>
+                            <li>Sympathy flowers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Seamless Process</h2>
+                <p>From initial concept to flawless execution</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery Call</h3>
+                    <p>We'll discuss your vision, venue, color palette, and budget to understand your needs.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Proposal</h3>
+                    <p>You'll receive a tailored design concept with floral selections and decor and pricing.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Final Planning</h3>
+                    <p>We refine the details, confirm flower availability, and create a setup timeline.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Event Day</h3>
+                    <p>Our team handles delivery, installation, and final styling touches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decor Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Signature Decor Services</h2>
+                <p>Beyond flowers - complete event transformations</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌸</div>
+                    <h3>Floral Installations</h3>
+                    <p>Statement pieces like hanging installations, floral arches, and flower walls.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎈</div>
+                    <h3>Balloon Designs</h3>
+                    <p>Elegant balloon garlands, arches, and organic installations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Table Scapes</h3>
+                    <p>Complete table designs with linens, centerpieces, and place settings.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Venue Dressing</h3>
+                    <p>Full space transformations from entrance to exit.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛋️</div>
+                    <h3>Furniture Rentals</h3>
+                    <p>Curated selection of tables, chairs, and lounge furniture.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Lighting Design</h3>
+                    <p>Ambient lighting to complement your floral designs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Love</h2>
+                <p>What our clients say about our event services</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>B'Silent created magic for our wedding. The floral arch was everything I dreamed of and more. Guests couldn't stop talking about the flowers!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p class="author-name">Thabo & Lesego</p>
+                        <p class="testimonial-role">Wedding Client</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Our annual gala has never looked better. The floral centerpieces perfectly complemented our brand colors and elevated the entire event.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p class="author-name">Michael T.</p>
+                        <p class="testimonial-role">Corporate Client</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>The beautiful arrangements for my sister's baby shower was so beautiful and meaningful. They handled everything with such care and compassion.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p class="author-name">Sarah W.</p>
+                        <p class="testimonial-role">Baby Shower Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <!-- CTA Section -->
+            <section class="footer-cta">
+                <h2>Ready to Create Something Beautiful?</h2>
+                <a href="contact.html" class="btn btn-primary">Begin Your Journey</a>
+            </section>
+            <div class="footer-connect">
+                <h3>Connect With Us</h3>
+                <div class="footer-social">
+                    <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/b.silent.flowers?mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+            <br />
+
+            <div class="copyright">
+                © 2023 B'SILENT. All rights reserved. | Elegant Flowers & Catering for Every Occasion.
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
