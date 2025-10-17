@@ -1199,9 +1199,6 @@ body {
     }
 }
 
-/* ===================== */
-/* EVENTS PAGE SPECIFIC STYLES */
-/* ===================== */
 
 /* Hero Section - Events */
 .events-hero {
@@ -1422,7 +1419,7 @@ body {
         padding: 1.5rem;
     }
 }
-/* Additional minimal styles to fix layout issues */
+/* Additional minimal styles*/
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;

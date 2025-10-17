@@ -15,7 +15,7 @@ $guest_count = htmlspecialchars($_POST['guest_count']);
 $event_details = htmlspecialchars($_POST['event_details']);
 $services = implode(', ', $_POST['services']);
 
-$to = "info@bsilentofficial.co.za"; // Your business email
+$to = "info@bsilentofficial.co.za";
 
 $email_subject = "Event Quote Request: $event_name";
 $headers = "From: website@bsilentofficial.co.za\r\n";

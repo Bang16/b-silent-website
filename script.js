@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileMenuBtn.addEventListener('click', function () {
             navLinks.classList.toggle('active');
 
-            // Optional: Change hamburger icon to "X" when open
+            //Change hamburger icon to "X" when open
             this.classList.toggle('open');
         });
     } else {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkoutBtn = document.querySelector('.checkout-btn');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', function () {
-            // Example: Redirect to checkout page
+            //Redirect to checkout page
             window.location.href = 'checkout.html';
         });
     }
