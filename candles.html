@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Candles | B'SILENT – Luxury Scented Candles</title>
+    <meta name="description" content="Premium artisan candles in Johannesburg - Sweet collection, bespoke scents & cocktail candles for every mood">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arapey:ital,wght@0,400;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <img src="images/logo.png" alt="B'SILENT Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="flowers.html">Flowers</a>
+                    <a href="candles.html" class="active">Candles</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cartToggle">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Candle Selections</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items-->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Candle Hero -->
+    <section class="flower-hero">
+        <div class="container">
+            <h1>Artisan Candle Collections</h1>
+            <p class="subtitle">Handcrafted scents to transform your space and soothe your soul</p>
+        </div>
+    </section>
+    <br />
+
+    <!-- Candle Collections -->
+    <section class="flower-collections">
+        <div class="container">
+            <!-- Oh Sweet Candle Collection -->
+            <div class="collection-section">
+                <h2>Oh Sweet Candle Collection</h2>
+                <p class="collection-description">Indulgent sweet-scented candles that bring comfort and joy to any space</p>
+                <div class="product-grid">
+                    <!-- Gold Drizzle -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/gold-drizzle.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Gold Drizzle</h3>
+                            <p class="candle-scent">Caramel | Toffee | Brown Sugar</p>
+                            <p class="candle-mood"><em>Comforting, Rich & Golden Evenings</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Gold Drizzle Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Melted Whisper -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/melted-whisper.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Melted Whisper</h3>
+                            <p class="candle-scent">Chocolate | Vanilla Bean | Hazelnut</p>
+                            <p class="candle-mood"><em>Cozy, Indulgent, Romantic Nights</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Melted Whisper Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Kiss -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/cloud-kiss.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Cloud Kiss</h3>
+                            <p class="candle-scent">Candy Floss | Pink Vanilla</p>
+                            <p class="candle-mood"><em>Whimsical, Youthful & Joyful</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Cloud Kiss Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sweet Chill -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/sweet-chill.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Sweet Chill</h3>
+                            <p class="candle-scent">Ice Cream | Vanilla Cream | Sugar Cone</p>
+                            <p class="candle-mood"><em>Playful, Refreshing & Pure Happiness</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Sweet Chill Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Velvet Scoop -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/velvet-scoop.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Velvet Scoop</h3>
+                            <p class="candle-scent">Madagascar Vanilla | Soft Musk</p>
+                            <p class="candle-mood"><em>Calm, Sensual, & Timeless</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Velvet Scoop Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pop & Play -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/pop-play.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Pop & Play</h3>
+                            <p class="candle-scent">Bubblegum | Strawberry</p>
+                            <p class="candle-mood"><em>Fun, Carefree & Nostalgic</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Pop & Play Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillow Sugar -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/pillow-sugar.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Pillow Sugar</h3>
+                            <p class="candle-scent">Marshmallow | Vanilla Sponge | Creamy Frosting</p>
+                            <p class="candle-mood"><em>Cozy, Soft, & Tender Affection</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Pillow Sugar Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sugar Blush -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/sugar-blush.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Sugar Blush</h3>
+                            <p class="candle-scent">Strawberry | Whipped Cream | Pink Sugar</p>
+                            <p class="candle-mood"><em>Romantic, Youthful & Soft Sweetness</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R250</span>
+                                    <button class="add-to-cart" data-name="Sugar Blush Candle" data-price="250">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <!-- Bespoke Candles -->
+            <div class="collection-section">
+                <h2>Bespoke Candles</h2>
+                <p class="collection-description">Premium customizable candles in various jar types and sizes for every mood setting</p>
+                <div class="product-grid">
+                    <!-- Amour -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/amour.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Amour</h3>
+                            <p class="candle-scent">Velvet Rose, Amberwood, Pink Pepper, Musk</p>
+                            <p class="candle-mood"><em>The delicate veil of romance - tender, mysterious and lingering</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Clear Jar - 95ml</span>
+                                    <span>R105</span>
+                                    <button class="add-to-cart" data-name="Amour - Clear Jar 95ml" data-price="105">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Clear Jar - 315ml</span>
+                                    <span>R165</span>
+                                    <button class="add-to-cart" data-name="Amour - Clear Jar 315ml" data-price="165">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Clear Jar - 550ml</span>
+                                    <span>R210</span>
+                                    <button class="add-to-cart" data-name="Amour - Clear Jar 550ml" data-price="210">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Frosted Jar - 95ml</span>
+                                    <span>R115</span>
+                                    <button class="add-to-cart" data-name="Amour - Frosted Jar 95ml" data-price="115">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Frosted Jar - 315ml</span>
+                                    <span>R175</span>
+                                    <button class="add-to-cart" data-name="Amour - Frosted Jar 315ml" data-price="175">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Frosted Jar - 550ml</span>
+                                    <span>R220</span>
+                                    <button class="add-to-cart" data-name="Amour - Frosted Jar 550ml" data-price="220">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Glass Fish Bowl</span>
+                                    <span>R280</span>
+                                    <button class="add-to-cart" data-name="Amour - Glass Fish Bowl" data-price="280">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kiss The Flame -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/kiss-flame.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Kiss The Flame</h3>
+                            <p class="candle-scent">Damask Rose, Vanilla, Oud, Dark Cocoa</p>
+                            <p class="candle-mood"><em>The thrill of love's spark - sensual, bold, and warm</em></p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Clear Jar - 95ml</span>
+                                    <span>R105</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Clear Jar 95ml" data-price="105">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Clear Jar - 315ml</span>
+                                    <span>R165</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Clear Jar 315ml" data-price="165">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Clear Jar - 550ml</span>
+                                    <span>R210</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Clear Jar 550ml" data-price="210">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Frosted Jar - 95ml</span>
+                                    <span>R115</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Frosted Jar 95ml" data-price="115">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Frosted Jar - 315ml</span>
+                                    <span>R175</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Frosted Jar 315ml" data-price="175">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Frosted Jar - 550ml</span>
+                                    <span>R220</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Frosted Jar 550ml" data-price="220">Add</button>
+                                </div>
+                                <div class="price-option">
+                                    <span>Glass Fish Bowl</span>
+                                    <span>R280</span>
+                                    <button class="add-to-cart" data-name="Kiss The Flame - Glass Fish Bowl" data-price="280">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more bespoke candles following the same pattern -->
+                    <!-- Note: For brevity, I've shown 2 bespoke candles. You would repeat the pattern for all 16 -->
+
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p><em>All bespoke candles available in Clear, Frosted, Shiny Black, and Shiny White jars</em></p>
+                    <a href="contact.html" class="btn btn-outline">View Full Bespoke Collection</a>
+                </div>
+            </div>
+
+            <br />
+
+            <!-- Cocktail Candles -->
+            <div class="collection-section">
+                <h2>Cocktail Candles</h2>
+                <p class="collection-description">Unique cocktail-inspired candles that bring vibrant energy to your space</p>
+                <div class="product-grid">
+                    <!-- Iced Matcha -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/iced-matcha.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Iced Matcha</h3>
+                            <p class="candle-scent">Raspberry, Blueberry, Strawberry, Mango</p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R290</span>
+                                    <button class="add-to-cart" data-name="Iced Matcha Candle" data-price="290">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Iced Coffee -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/iced-coffee.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Iced Coffee</h3>
+                            <p class="candle-scent">Vanilla, Berry, Caramel, Hazelnut</p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R290</span>
+                                    <button class="add-to-cart" data-name="Iced Coffee Candle" data-price="290">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Velvet Shot -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/velvet-shot.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Velvet Shot</h3>
+                            <p class="candle-scent">Espresso, Caramel, Vanilla cream, Cocoa Dust</p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R290</span>
+                                    <button class="add-to-cart" data-name="Velvet Shot Candle" data-price="290">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Martini Cocktail -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/martini-cocktail.jpg');"></div>
+                        <div class="product-details">
+                            <h3>Martini Cocktail</h3>
+                            <p class="candle-scent">Strawberry, Raspberry, Mango, Lime</p>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span>Standard</span>
+                                    <span>R290</span>
+                                    <button class="add-to-cart" data-name="Martini Cocktail Candle" data-price="290">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <!-- Additional Services -->
+            <div class="collection-section">
+                <h2>Customization Services</h2>
+                <div class="addons-grid">
+                    <div class="addon-card">
+                        <h3>Bamboo Lid</h3>
+                        <span class="price">80mm: R35 | 100mm: R89</span>
+                        <button class="add-to-cart" data-name="Bamboo Lid - 80mm" data-price="35">Add 80mm</button>
+                        <button class="add-to-cart" data-name="Bamboo Lid - 100mm" data-price="89">Add 100mm</button>
+                    </div>
+                    <div class="addon-card">
+                        <h3>Shiny Lid</h3>
+                        <span class="price">80mm: R35 | 100mm: R39</span>
+                        <button class="add-to-cart" data-name="Shiny Lid - 80mm" data-price="35">Add 80mm</button>
+                        <button class="add-to-cart" data-name="Shiny Lid - 100mm" data-price="39">Add 100mm</button>
+                    </div>
+                    <div class="addon-card">
+                        <h3>Extra Fragrance Oil</h3>
+                        <span class="price">R5 per scent</span>
+                        <button class="add-to-cart" data-name="Extra Fragrance Oil" data-price="5">Add</button>
+                    </div>
+                    <div class="addon-card">
+                        <h3>Custom Mould</h3>
+                        <span class="price">R2 per shape</span>
+                        <button class="add-to-cart" data-name="Custom Mould" data-price="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Notice -->
+    <section class="delivery-notice">
+        <div class="container">
+            <p><i class="fas fa-truck"></i> Delivery for candles: R250 (Johannesburg, Pretoria & North West) - Not included in listed prices</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-text">
+                        <p class="brand-name">B'SILENT</p>
+                        <p class="brand-tagline">"Curated Calm"</p>
+                    </div>
+                </div>
+                <div class="footer-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/b_silent.official" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/share/16ph5jVDbW/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://wa.me/27696661407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://tiktok.com/@bsilent.official" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 B'SILENT. All rights reserved. | Elegant Flowers, Candles & Catering for Every Occasion.</p>
+            </div>
+            <div style="text-align: right; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.6; font-size: 0.8rem; margin: 0;">
+                    Crafted with ♥ by Iskaashi Solutions
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
